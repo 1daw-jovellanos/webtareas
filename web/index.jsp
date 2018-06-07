@@ -9,21 +9,15 @@
 <%@page import="java.util.*" %>
 
 <%
-    List<Tarea> tareas = Tarea.obtenerTodas();
+   // código
 %>
 <!DOCTYPE html>
 <html>
     <head>
-        <%@include file="inc/head.html" %>
+       
         <title>JSP Page</title>
     </head>
-    <body class="container">
-        <%@include file="inc/navbar.jsp"%>
-        <div class="animated fadeInUp">
-        <% for (Tarea t : tareas) { %>
-        <p><%=t.getTitulo() + " / " + t.getDescripcion()%></p>
-        <% } %>
-        </div>
-   <%@include file="inc/footer.html" %>
+    <body>
+        Hoy es <%= java.time.LocalDate.now()%>.             
     </body>
 </html>

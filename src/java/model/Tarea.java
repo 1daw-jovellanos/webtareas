@@ -85,8 +85,8 @@ public class Tarea {
     public boolean retrieve() {
         boolean resultado = false;
         String sql = "SELECT titulo, descripcion, completada "
-                + "FROM tarea"
-                + "WHERE id = ?";
+                + " FROM tarea"
+                + " WHERE id = ?";
         try (
                 Connection conn = ConexionBd.obtener();
                 PreparedStatement stmt = conn.prepareStatement(sql);) {
